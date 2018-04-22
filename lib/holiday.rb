@@ -20,10 +20,10 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
     if season.to_s == "winter"
       holidays.collect do |holiday,items|
         if holiday.to_s == "christmas"
-          items.push("Balloons")
+          items.push(supply)
         end
         if holiday.to_s == "new_years"
-          items.push("Balloons") 
+          items.push(supply) 
         end
       end
     end
