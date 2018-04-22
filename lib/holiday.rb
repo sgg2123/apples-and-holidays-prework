@@ -16,17 +16,8 @@ end
 
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
-  holiday_hash.collect do |season, holidays|
-    if season.to_s == "winter"
-      holidays.collect do |holiday,items|
-        if holiday.to_s == "christmas"
-          items.push("Balloons")
-        end
-        if holiday.to_s == "new_years"
-          items.push("Balloons") 
-        end
-      end
-    end
+  holiday_hash[:winter].each do |holiday, items|
+    items.push(supply)
   end
 end
 
