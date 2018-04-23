@@ -41,7 +41,7 @@ end
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.collect do |season, holidays|
     holidays.select do |holiday, items|
-      items.include?("BBQ").keys.flatten
+      items.include?("BBQ")
     end
   end
 end
