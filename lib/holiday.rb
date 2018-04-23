@@ -39,7 +39,7 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
-  with bbq = ""
+  with_bbq = ""
   holiday_hash.collect do |season, holidays|
     holidays.select do |holiday, items|
       with_bbq = items.include?("BBQ")
